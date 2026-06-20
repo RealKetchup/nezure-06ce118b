@@ -58,16 +58,15 @@ function Index() {
             style={{ fontFamily: "var(--font-display)" }}
             className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl"
           >
-            <span className="text-py-keyword font-mono">class</span>{" "}
-            <span className="text-gradient">Nezure</span>
-            <span className="font-mono text-py-operator">(</span>
-            <span className="font-mono text-py-builtin">Human</span>
-            <span className="font-mono text-py-operator">):</span>
+            <span className="text-py-keyword font-mono"></span>{" "}
+            <span className="text-gradient">Nezure Website!</span>
+            <span className="font-mono text-py-operator"></span>
+            <span className="font-mono text-py-builtin"></span>
+            <span className="font-mono text-py-operator"></span>
           </h1>
           <p className="max-w-2xl pl-1 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <span className="text-py-comment">
-              """A small corner of the internet — written in the language I love. Scroll for who I am,
-              what I'm playing on Discord right now, and what other visitors have said."""
+              "welcome vro"
             </span>
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
