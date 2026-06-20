@@ -49,42 +49,12 @@ function Index() {
         {/* Hero */}
         <section className="relative space-y-7 fade-in-up">
           <div aria-hidden className="pointer-events-none absolute -inset-x-20 -top-20 -z-10 h-72 bg-grid opacity-60" />
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-py-comment backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            <span className="text-foreground/80">$ python3 -m nezure</span>
-            <span className="caret" />
-          </div>
           <h1
             style={{ fontFamily: "var(--font-display)" }}
             className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl"
           >
-            <span className="text-py-keyword font-mono"></span>{" "}
             <span className="text-gradient">Nezure Website!</span>
-            <span className="font-mono text-py-operator"></span>
-            <span className="font-mono text-py-builtin"></span>
-            <span className="font-mono text-py-operator"></span>
           </h1>
-          <p className="max-w-2xl pl-1 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            <span className="text-py-comment">
-              "welcome vro"
-            </span>
-          </p>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <a
-              href="#discord"
-              className="inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold text-primary-foreground ring-glow transition-transform hover:-translate-y-0.5"
-              style={{ background: "var(--gradient-accent)" }}
-            >
-              <span>see what i'm doing</span>
-              <span aria-hidden>→</span>
-            </a>
-            <a
-              href="#reviews"
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-card/60 px-4 py-2.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-card"
-            >
-              <span className="text-py-decorator">@</span>leave_review
-            </a>
-          </div>
         </section>
 
 
