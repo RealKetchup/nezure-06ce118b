@@ -118,7 +118,7 @@ export function DiscordCard() {
   const mainActivity = data?.activities.find((a) => a.type !== 4);
 
   return (
-    <div className="overflow-hidden rounded-lg border border-border bg-card shadow-xl">
+    <div className="overflow-hidden rounded-xl border border-border glass shadow-card">
       <div className="flex items-center gap-3 border-b border-border bg-muted/40 px-4 py-2.5">
         <div className="flex gap-1.5">
           <span className="h-3 w-3 rounded-full bg-destructive/80" />

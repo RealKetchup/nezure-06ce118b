@@ -13,7 +13,7 @@ export function CodeBlock({ filename, language = "python", children, startLine =
   const lineNumbers = Array.from({ length: Math.max(lines, 20) }, (_, i) => startLine + i);
 
   return (
-    <div className="overflow-hidden rounded-lg border border-border bg-card shadow-xl">
+    <div className="overflow-hidden rounded-xl border border-border glass shadow-card">
       {/* Title bar */}
       <div className="flex items-center gap-3 border-b border-border bg-muted/40 px-4 py-2.5">
         <div className="flex gap-1.5">
