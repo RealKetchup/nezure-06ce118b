@@ -79,7 +79,7 @@ export function DiscordCard() {
   const [data, setData] = useState<LanyardData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [tick, setTick] = useState(0);
-  const notConfigured = DISCORD_USER_ID === "00000000000000000000";
+  const notConfigured = false;
 
   useEffect(() => {
     if (notConfigured) return;
