@@ -117,7 +117,7 @@ function Index() {
       </main>
 
       <footer className="border-t border-border py-8 text-center text-xs text-py-comment">
-        # built with care · <span className="text-py-function">return None</span>
+        MADE BY YA BOY KETCHUP ONG
       </footer>
     </div>
   );
