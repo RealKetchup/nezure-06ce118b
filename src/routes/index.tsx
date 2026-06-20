@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen text-foreground">
       {/* Top status bar */}
-      <header className="sticky top-0 z-10 border-b border-border bg-background/80 backdrop-blur">
+      <header className="sticky top-0 z-20 border-b border-border glass">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 text-xs">
           <div className="flex items-center gap-2 text-py-comment">
             <span className="h-2 w-2 rounded-full bg-primary pulse-dot" style={{ color: "var(--color-primary)" }} />
@@ -37,34 +37,57 @@ function Index() {
             <span className="text-py-string">main</span>
           </div>
           <nav className="flex gap-5 text-py-comment">
-            <a href="#about" className="hover:text-py-function">about.py</a>
-            <a href="#discord" className="hover:text-py-function">discord.live</a>
-            <a href="#reviews" className="hover:text-py-function">reviews.db</a>
+            <a href="#about" className="transition-colors hover:text-py-function">about.py</a>
+            <a href="#discord" className="transition-colors hover:text-py-function">discord.live</a>
+            <a href="#reviews" className="transition-colors hover:text-py-function">reviews.db</a>
           </nav>
           <span className="hidden text-py-comment sm:inline">Python 3.12 · UTF-8</span>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl space-y-20 px-6 py-16">
+      <main className="relative mx-auto max-w-6xl space-y-24 px-6 py-20">
         {/* Hero */}
-        <section className="space-y-6">
-          <p className="text-sm text-py-comment">
-            $ python3 -m nezure <span className="caret" />
-          </p>
-          <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-6xl">
-            <span className="text-py-keyword">class</span>{" "}
-            <span className="text-py-class">Nezure</span>
-            <span className="text-py-operator">(</span>
-            <span className="text-py-builtin">Human</span>
-            <span className="text-py-operator">):</span>
+        <section className="relative space-y-7 fade-in-up">
+          <div aria-hidden className="pointer-events-none absolute -inset-x-20 -top-20 -z-10 h-72 bg-grid opacity-60" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs text-py-comment backdrop-blur">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="text-foreground/80">$ python3 -m nezure</span>
+            <span className="caret" />
+          </div>
+          <h1
+            style={{ fontFamily: "var(--font-display)" }}
+            className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl"
+          >
+            <span className="text-py-keyword font-mono">class</span>{" "}
+            <span className="text-gradient">Nezure</span>
+            <span className="font-mono text-py-operator">(</span>
+            <span className="font-mono text-py-builtin">Human</span>
+            <span className="font-mono text-py-operator">):</span>
           </h1>
-          <p className="max-w-2xl pl-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="max-w-2xl pl-1 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <span className="text-py-comment">
               """A small corner of the internet — written in the language I love. Scroll for who I am,
               what I'm playing on Discord right now, and what other visitors have said."""
             </span>
           </p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a
+              href="#discord"
+              className="inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold text-primary-foreground ring-glow transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--gradient-accent)" }}
+            >
+              <span>see what i'm doing</span>
+              <span aria-hidden>→</span>
+            </a>
+            <a
+              href="#reviews"
+              className="inline-flex items-center gap-2 rounded-md border border-border bg-card/60 px-4 py-2.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-card"
+            >
+              <span className="text-py-decorator">@</span>leave_review
+            </a>
+          </div>
         </section>
+
 
         {/* About */}
         <section id="about" className="space-y-4 scroll-mt-20">
