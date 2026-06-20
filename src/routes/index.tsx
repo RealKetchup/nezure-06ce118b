@@ -163,7 +163,7 @@ function PyAbout() {
         role<span className="text-py-operator">:</span>{" "}
         <span className="text-py-builtin">str</span>{" "}
         <span className="text-py-operator">=</span>{" "}
-        <span className="text-py-string">"builder / tinkerer"</span>
+        <span className="text-py-string">"Coder"</span>
       </div>
       <div className="pl-6">
         loves<span className="text-py-operator">:</span>{" "}
@@ -171,14 +171,14 @@ function PyAbout() {
         <span className="text-py-operator">=</span> [
         <span className="text-py-string">"python"</span>,{" "}
         <span className="text-py-string">"discord"</span>,{" "}
-        <span className="text-py-string">"late-night coding"</span>,{" "}
-        <span className="text-py-string">"good music"</span>
+        <span className="text-py-string">"Playing Roblox/Minecraft"</span>,{" "}
+        <span className="text-py-string">"All my friends =)"</span>
         ]
       </div>
       <div className="pl-6">
         status<span className="text-py-operator">:</span> Final[<span className="text-py-builtin">str</span>]{" "}
         <span className="text-py-operator">=</span>{" "}
-        <span className="text-py-string">"always shipping"</span>
+        <span className="text-py-string">"hamburbur"</span>
       </div>
       <div>&nbsp;</div>
       <div className="pl-6">
