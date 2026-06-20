@@ -55,6 +55,16 @@ function Index() {
           >
             <span className="text-gradient">Nezure Website!</span>
           </h1>
+          <a
+            href="https://www.roblox.com/users/profile?username=Kleos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border border-border bg-card/60 px-4 py-2.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-card"
+          >
+            <span aria-hidden>🎮</span>
+            <span>Roblox: Kleos</span>
+            <span aria-hidden>→</span>
+          </a>
         </section>
 
 
