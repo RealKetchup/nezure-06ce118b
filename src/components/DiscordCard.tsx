@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 // Lanyard API: https://github.com/Phineas/lanyard
 // User must join discord.gg/lanyard, then replace DISCORD_USER_ID below.
-const DISCORD_USER_ID = "00000000000000000000"; // ← replace with your Discord user ID
+const DISCORD_USER_ID = "1383134441362423928";
 
 interface LanyardActivity {
   id: string;
@@ -79,7 +79,7 @@ export function DiscordCard() {
   const [data, setData] = useState<LanyardData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [tick, setTick] = useState(0);
-  const notConfigured = DISCORD_USER_ID === "00000000000000000000";
+  const notConfigured = false;
 
   useEffect(() => {
     if (notConfigured) return;
