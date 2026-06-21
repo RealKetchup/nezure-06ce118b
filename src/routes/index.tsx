@@ -51,7 +51,7 @@ function Index() {
           <div aria-hidden className="pointer-events-none absolute -inset-x-20 -top-20 -z-10 h-72 bg-grid opacity-60" />
           <h1
             style={{ fontFamily: "var(--font-display)" }}
-            className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl"
+            className="text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl"
           >
             <span className="text-gradient">Nezure Website!</span>
           </h1>
