@@ -47,27 +47,7 @@ function Index() {
       <main className="relative mx-auto max-w-6xl space-y-24 px-6 py-20">
         {/* Discord */}
         <section id="discord" className="space-y-4 scroll-mt-20">
-          <div className="flex items-center justify-between gap-4 flex-wrap">
-            <SectionTitle index={1} name="discord_presence.live" />
-            <a
-              href="https://www.roblox.com/users/2999099593/profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Roblox: Kleos"
-              title="Roblox: Kleos"
-              className="group inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card/60 backdrop-blur transition-colors hover:bg-card"
-              style={{ filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.6))" }}
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-6 w-6 animate-[spin_6s_linear_infinite] text-foreground"
-                fill="currentColor"
-                aria-hidden
-              >
-                <path d="M4.84 2 2 13.16 19.16 22 22 10.84 4.84 2zm7.9 12.84-3.58-1.32 1.32-3.58 3.58 1.32-1.32 3.58z" />
-              </svg>
-            </a>
-          </div>
+          <SectionTitle index={1} name="discord_presence.live" />
           <p className="text-sm text-py-comment">
             # streaming live from Discord via Lanyard — updates every 15s
           </p>
