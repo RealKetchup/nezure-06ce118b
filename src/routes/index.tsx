@@ -37,7 +37,6 @@ function Index() {
             <span className="text-py-string">main</span>
           </div>
           <nav className="flex gap-5 text-py-comment">
-            <a href="#about" className="transition-colors hover:text-py-function">about.py</a>
             <a href="#discord" className="transition-colors hover:text-py-function">discord.live</a>
             <a href="#reviews" className="transition-colors hover:text-py-function">reviews.db</a>
           </nav>
@@ -46,39 +45,29 @@ function Index() {
       </header>
 
       <main className="relative mx-auto max-w-6xl space-y-24 px-6 py-20">
-        {/* Hero */}
-        <section className="relative space-y-7 fade-in-up">
-          <div aria-hidden className="pointer-events-none absolute -inset-x-20 -top-20 -z-10 h-72 bg-grid opacity-60" />
-          <h1
-            style={{ fontFamily: "var(--font-display)" }}
-            className="text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl"
-          >
-            <span className="text-gradient">Nezure Website!</span>
-          </h1>
-          <a
-            href="https://www.roblox.com/users/2999099593/profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-border bg-card/60 px-4 py-2.5 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-card"
-          >
-            <span aria-hidden>🎮</span>
-            <span>Roblox: Kleos</span>
-            <span aria-hidden>→</span>
-          </a>
-        </section>
-
-
-        {/* About */}
-        <section id="about" className="space-y-4 scroll-mt-20">
-          <SectionTitle index={1} name="about.py" />
-          <CodeBlock filename="about.py">
-            <PyAbout />
-          </CodeBlock>
-        </section>
-
         {/* Discord */}
         <section id="discord" className="space-y-4 scroll-mt-20">
-          <SectionTitle index={2} name="discord_presence.live" />
+          <div className="flex items-center justify-between gap-4 flex-wrap">
+            <SectionTitle index={1} name="discord_presence.live" />
+            <a
+              href="https://www.roblox.com/users/2999099593/profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Roblox: Kleos"
+              title="Roblox: Kleos"
+              className="group inline-flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card/60 backdrop-blur transition-colors hover:bg-card"
+              style={{ filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.6))" }}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6 animate-[spin_6s_linear_infinite] text-foreground"
+                fill="currentColor"
+                aria-hidden
+              >
+                <path d="M4.84 2 2 13.16 19.16 22 22 10.84 4.84 2zm7.9 12.84-3.58-1.32 1.32-3.58 3.58 1.32-1.32 3.58z" />
+              </svg>
+            </a>
+          </div>
           <p className="text-sm text-py-comment">
             # streaming live from Discord via Lanyard — updates every 15s
           </p>
@@ -87,7 +76,7 @@ function Index() {
 
         {/* Reviews */}
         <section id="reviews" className="space-y-4 scroll-mt-20">
-          <SectionTitle index={3} name="reviews.db" />
+          <SectionTitle index={2} name="reviews.db" />
           <p className="text-sm text-py-comment">
             # leave a note in the guestbook — no signup, just your name and a rating
           </p>
