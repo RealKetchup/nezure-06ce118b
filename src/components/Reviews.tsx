@@ -14,6 +14,17 @@ interface Review {
 export function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
+  const removeFn = useServerFn(deleteReview);
+  const handleDelete = async (id: string) => {
+    const code = window.prompt("Enter secret code to delete this review:");
+    if (!code) return;
+    try {
+      await removeFn({ data: { id, code } });
+      setReviews((prev) => prev.filter((r) => r.id !== id));
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Failed to delete");
+    }
+  };
   const [name, setName] = useState("");
   const [rating, setRating] = useState(5);
   const [message, setMessage] = useState("");
@@ -153,7 +164,7 @@ export function Reviews() {
               # No reviews yet. Be the first to <span className="text-py-function">leave_review()</span>
             </p>
           ) : (
-            reviews.map((r) => <ReviewItem key={r.id} review={r} />)
+            reviews.map((r) => <ReviewItem key={r.id} review={r} onDelete={handleDelete} />)
           )}
         </div>
       </div>
@@ -170,7 +181,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-function ReviewItem({ review }: { review: Review }) {
+function ReviewItem({ review, onDelete }: { review: Review; onDelete: (id: string) => void }) {
   const date = new Date(review.created_at);
   const dateStr = date.toISOString().slice(0, 10);
   return (
@@ -181,7 +192,18 @@ function ReviewItem({ review }: { review: Review }) {
           <span className="text-py-class">{review.name.replace(/[^a-zA-Z0-9_]/g, "_") || "Anonymous"}</span>
           <span className="text-py-operator">:</span>
         </div>
-        <span className="text-[10px] text-py-comment">{dateStr}</span>
+        <div className="flex items-center gap-2">
+          <span className="text-[10px] text-py-comment">{dateStr}</span>
+          <button
+            type="button"
+            onClick={() => onDelete(review.id)}
+            aria-label="Delete review"
+            title="Delete (requires code)"
+            className="text-xs text-muted-foreground/60 transition-colors hover:text-destructive"
+          >
+            ×
+          </button>
+        </div>
       </div>
       <div className="ml-4 mt-1">
         <span className="text-py-string">{"★".repeat(review.rating)}</span>
