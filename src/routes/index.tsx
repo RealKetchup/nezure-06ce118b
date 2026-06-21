@@ -76,7 +76,7 @@ function Index() {
 
         {/* Reviews */}
         <section id="reviews" className="space-y-4 scroll-mt-20">
-          <SectionTitle index={3} name="reviews.db" />
+          <SectionTitle index={2} name="reviews.db" />
           <p className="text-sm text-py-comment">
             # leave a note in the guestbook — no signup, just your name and a rating
           </p>
