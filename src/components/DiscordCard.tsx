@@ -158,8 +158,26 @@ export function DiscordCard() {
                 />
               </div>
               <div className="min-w-0">
-                <div className="text-lg font-semibold text-foreground">
-                  {data.discord_user.global_name ?? data.discord_user.username}
+                <div className="flex items-center gap-2 text-lg font-semibold text-foreground">
+                  <span>{data.discord_user.global_name ?? data.discord_user.username}</span>
+                  <a
+                    href="https://www.roblox.com/users/2999099593/profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Roblox: Kleos"
+                    title="Roblox: Kleos"
+                    className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-border bg-card/60 backdrop-blur transition-colors hover:bg-card"
+                    style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary) / 0.7))" }}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4 animate-[spin_6s_linear_infinite] text-foreground"
+                      fill="currentColor"
+                      aria-hidden
+                    >
+                      <path d="M4.84 2 2 13.16 19.16 22 22 10.84 4.84 2zm7.9 12.84-3.58-1.32 1.32-3.58 3.58 1.32-1.32 3.58z" />
+                    </svg>
+                  </a>
                 </div>
                 <div className="text-xs text-py-comment">@{data.discord_user.username}</div>
                 {customStatus && (
