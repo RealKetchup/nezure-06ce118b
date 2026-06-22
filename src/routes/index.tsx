@@ -68,6 +68,8 @@ function Index() {
       <footer className="border-t border-border py-8 text-center text-xs text-py-comment">
         MADE BY YA BOY KETCHUP ONG
       </footer>
+
+      <MusicPlayer />
     </div>
   );
 }
