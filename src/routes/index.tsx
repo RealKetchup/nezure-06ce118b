@@ -71,6 +71,7 @@ function Index() {
       </footer>
 
       <MusicPlayer />
+      <CursorFX />
     </div>
   );
 }
