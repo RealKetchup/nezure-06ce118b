@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CodeBlock } from "@/components/CodeBlock";
 import { DiscordCard } from "@/components/DiscordCard";
+import { MusicPlayer } from "@/components/MusicPlayer";
 import { Reviews } from "@/components/Reviews";
 
 export const Route = createFileRoute("/")({
