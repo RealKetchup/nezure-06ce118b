@@ -172,12 +172,12 @@ export function DiscordCard() {
                     style={{ filter: "drop-shadow(0 0 6px rgba(255,255,255,0.9))" }}
                   >
                     <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-                      <g transform="rotate(12 12 12)" fill="#ffffff">
-                        <path d="M3 3h18v18H3z" />
-                      </g>
-                      <g transform="rotate(12 12 12)">
-                        <rect x="9.5" y="9.5" width="5" height="5" fill="transparent" style={{ mixBlendMode: "destination-out" }} />
-                      </g>
+                      <path
+                        fill="#ffffff"
+                        fillRule="evenodd"
+                        d="M3 3h18v18H3zM9.5 9.5h5v5h-5z"
+                        transform="rotate(12 12 12)"
+                      />
                     </svg>
                   </a>
                   <a
