@@ -171,11 +171,14 @@ export function DiscordCard() {
                     className="inline-flex h-5 w-5 shrink-0 items-center justify-center transition-transform hover:scale-110"
                     style={{ filter: "drop-shadow(0 0 6px rgba(255,255,255,0.9))" }}
                   >
-                    <img
-                      src={robloxLogo.url}
-                      alt="Roblox"
-                      className="h-5 w-5 object-contain"
-                    />
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+                      <g transform="rotate(12 12 12)" fill="#ffffff">
+                        <path d="M3 3h18v18H3z" />
+                      </g>
+                      <g transform="rotate(12 12 12)">
+                        <rect x="9.5" y="9.5" width="5" height="5" fill="transparent" style={{ mixBlendMode: "destination-out" }} />
+                      </g>
+                    </svg>
                   </a>
                   <a
                     href="https://discord.com/users/1383134441362423928"
