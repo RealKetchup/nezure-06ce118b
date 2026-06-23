@@ -167,14 +167,17 @@ export function DiscordCard() {
                     rel="noopener noreferrer"
                     aria-label="Roblox: Kleos"
                     title="Roblox: Kleos"
-                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center"
-                    style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary) / 0.7))" }}
+                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center transition-transform hover:scale-110"
+                    style={{ filter: "drop-shadow(0 0 6px rgba(226,40,49,0.85))" }}
                   >
-                    <img
-                      src={robloxLogo.url}
-                      alt="Roblox"
-                      className="h-5 w-5 animate-[spin_6s_linear_infinite] object-contain"
-                    />
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5 text-[#e22831]"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.84 2 2 13.16 13.16 22 22 10.84 10.84 2H4.84zm6.32 9.05 3.64.95-.95 3.64-3.64-.95.95-3.64z" />
+                    </svg>
                   </a>
                   <a
                     href="https://discord.com/users/1383134441362423928"
