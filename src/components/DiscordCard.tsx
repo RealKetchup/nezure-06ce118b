@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import discordLogo from "@/assets/discord-logo.png.asset.json";
-import robloxLogo from "@/assets/roblox-logo.png.asset.json";
+
 
 // Lanyard API: https://github.com/Phineas/lanyard
 // User must join discord.gg/lanyard, then replace DISCORD_USER_ID below.
@@ -171,11 +171,14 @@ export function DiscordCard() {
                     className="inline-flex h-5 w-5 shrink-0 items-center justify-center transition-transform hover:scale-110"
                     style={{ filter: "drop-shadow(0 0 6px rgba(255,255,255,0.9))" }}
                   >
-                    <img
-                      src={robloxLogo.url}
-                      alt="Roblox"
-                      className="h-5 w-5 object-contain"
-                    />
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+                      <path
+                        fill="#ffffff"
+                        fillRule="evenodd"
+                        d="M3 3h18v18H3zM9.5 9.5h5v5h-5z"
+                        transform="rotate(12 12 12)"
+                      />
+                    </svg>
                   </a>
                   <a
                     href="https://discord.com/users/1383134441362423928"
