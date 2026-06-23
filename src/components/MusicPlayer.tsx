@@ -21,6 +21,31 @@ export function MusicPlayer() {
     a.addEventListener("timeupdate", onTime);
     a.addEventListener("loadedmetadata", onTime);
     a.addEventListener("ended", onEnd);
+
+    // Try autoplay; if browser blocks it, start on first user interaction.
+    const tryPlay = async () => {
+      try {
+        await a.play();
+        setPlaying(true);
+      } catch {
+        const start = async () => {
+          try {
+            await a.play();
+            setPlaying(true);
+          } catch {
+            /* ignore */
+          }
+          window.removeEventListener("pointerdown", start);
+          window.removeEventListener("keydown", start);
+          window.removeEventListener("touchstart", start);
+        };
+        window.addEventListener("pointerdown", start, { once: true });
+        window.addEventListener("keydown", start, { once: true });
+        window.addEventListener("touchstart", start, { once: true });
+      }
+    };
+    tryPlay();
+
     return () => {
       a.removeEventListener("timeupdate", onTime);
       a.removeEventListener("loadedmetadata", onTime);
