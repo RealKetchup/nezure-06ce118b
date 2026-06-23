@@ -169,7 +169,7 @@ export function DiscordCard() {
                     aria-label="Roblox: Kleos"
                     title="Roblox: Kleos"
                     className="inline-flex h-5 w-5 shrink-0 items-center justify-center transition-transform hover:scale-110"
-                    style={{ filter: "drop-shadow(0 0 6px rgba(226,40,49,0.85))" }}
+                    style={{ filter: "drop-shadow(0 0 6px rgba(255,255,255,0.9))" }}
                   >
                     <img
                       src={robloxLogo.url}
