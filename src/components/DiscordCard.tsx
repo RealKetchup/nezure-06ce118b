@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import robloxLogo from "@/assets/roblox-logo.png.asset.json";
 import discordLogo from "@/assets/discord-logo.png.asset.json";
 
 // Lanyard API: https://github.com/Phineas/lanyard
