@@ -78,7 +78,7 @@ export function MusicPlayer() {
 
   return (
     <div className="fixed bottom-4 left-4 z-30 w-[280px] overflow-hidden rounded-xl border border-border glass shadow-card">
-      <audio ref={audioRef} src={trackAsset.url} preload="metadata" loop={false} />
+      <audio ref={audioRef} src={trackAsset.url} preload="auto" autoPlay loop />
       <div className="flex items-center gap-3 border-b border-border bg-muted/40 px-3 py-2">
         <div className="flex gap-1">
           <span className="h-2.5 w-2.5 rounded-full bg-destructive/80" />
