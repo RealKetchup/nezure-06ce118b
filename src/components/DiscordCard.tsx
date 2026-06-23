@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import discordLogo from "@/assets/discord-logo.png.asset.json";
-import robloxLogo from "@/assets/roblox-logo.png.asset.json";
+
 
 // Lanyard API: https://github.com/Phineas/lanyard
 // User must join discord.gg/lanyard, then replace DISCORD_USER_ID below.
